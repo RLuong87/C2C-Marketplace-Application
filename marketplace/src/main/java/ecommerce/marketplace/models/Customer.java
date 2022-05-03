@@ -1,9 +1,7 @@
 package ecommerce.marketplace.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -12,8 +10,20 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String email;
+    private String phoneNumber;
+
+    @OneToMany
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    private List<Customer> customerOrder;
 
     public Customer() {
+    }
+
+    public Customer(String name, String email, String phoneNumber) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public Customer(String name) {
@@ -34,5 +44,29 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public List<Customer> getCustomerOrder() {
+        return customerOrder;
+    }
+
+    public void setCustomerOrder(List<Customer> customerOrder) {
+        this.customerOrder = customerOrder;
     }
 }
