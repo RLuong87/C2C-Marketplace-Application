@@ -4,7 +4,7 @@
 ## Sub Header
 ### Sub Sub Header
 
-![img](https://live.staticflickr.com/65535/52004127397_dc5fb14224_b.jpg)
+![img]()
 
 To refer to a variable named `name` use the back ticks
 
