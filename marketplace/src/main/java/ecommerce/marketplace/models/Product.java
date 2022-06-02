@@ -1,7 +1,5 @@
 package ecommerce.marketplace.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 
 @Entity
@@ -10,25 +8,19 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    @JsonIgnore
-    private Customer customer;
-
-//    @ManyToOne
-//    @JoinColumn(name = "product_id", referencedColumnName = "id")
-//    private CustomerOrder customerOrder;
-
     private String productName;
     private String price;
+    private String department;
+    private String category;
 
     public Product() {
     }
 
-    public Product(String productName, String price) {
+    public Product(String productName, String price, String department, String category) {
         this.productName = productName;
         this.price = price;
+        this.department = department;
+        this.category = category;
     }
 
     public Long getId() {
@@ -55,19 +47,19 @@ public class Product {
         this.price = price;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
-//    public CustomerOrder getCustomerOrder() {
-//        return customerOrder;
-//    }
-//
-//    public void setCustomerOrder(CustomerOrder customerOrder) {
-//        this.customerOrder = customerOrder;
-//    }
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 }

@@ -15,7 +15,7 @@ public class Customer {
 
     @OneToMany
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    private List<Customer> customerOrder;
+    private List<CustomerOrder> orders;
 
     public Customer() {
     }
@@ -62,11 +62,11 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
-    public List<Customer> getCustomerOrder() {
-        return customerOrder;
+    public List<CustomerOrder> getOrders() {
+        return orders;
     }
 
-    public void setCustomerOrder(List<Customer> customerOrder) {
-        this.customerOrder = customerOrder;
+    public void setOrders(List<CustomerOrder> orders) {
+        this.orders = orders;
     }
 }

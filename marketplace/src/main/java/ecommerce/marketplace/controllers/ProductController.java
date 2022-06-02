@@ -21,6 +21,11 @@ public class ProductController {
         return new ResponseEntity<>(productRepository.findAll(), HttpStatus.OK);
     }
 
+//    @GetMapping("/{name}")
+//    public ResponseEntity<Product> getProductByDepartment(@PathVariable String name) {
+//
+//    }
+
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         return new ResponseEntity<>(productRepository.save(product), HttpStatus.CREATED);
@@ -33,6 +38,9 @@ public class ProductController {
 
         if (updates.getProductName() != null) product.setProductName(updates.getProductName());
         if (updates.getPrice() != null) product.setPrice(updates.getPrice());
+        if (updates.getPrice() != null) product.setPrice(updates.getPrice());
+        if (updates.getCategory() != null) product.setCategory(updates.getCategory());
+        if (updates.getDepartment() != null) product.setDepartment(updates.getDepartment());
 
         return productRepository.save(product);
     }
