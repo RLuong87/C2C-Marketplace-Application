@@ -1,7 +1,9 @@
-package ecommerce.marketplace.models;
+package ecommerce.marketplace.models.customerorder;
+
+import ecommerce.marketplace.models.product.Product;
+import ecommerce.marketplace.models.customer.Customer;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity

@@ -1,4 +1,6 @@
-package ecommerce.marketplace.models;
+package ecommerce.marketplace.models.address;
+
+import ecommerce.marketplace.models.customer.Customer;
 
 import javax.persistence.*;
 

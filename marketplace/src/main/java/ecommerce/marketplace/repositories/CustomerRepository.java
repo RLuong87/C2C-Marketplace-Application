@@ -1,6 +1,6 @@
 package ecommerce.marketplace.repositories;
 
-import ecommerce.marketplace.models.Customer;
+import ecommerce.marketplace.models.customer.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {

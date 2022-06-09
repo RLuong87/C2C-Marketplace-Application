@@ -1,6 +1,6 @@
 package ecommerce.marketplace.controllers;
 
-import ecommerce.marketplace.models.Product;
+import ecommerce.marketplace.models.product.Product;
 import ecommerce.marketplace.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,11 +20,6 @@ public class ProductController {
     public ResponseEntity<Iterable<Product>> getProducts() {
         return new ResponseEntity<>(productRepository.findAll(), HttpStatus.OK);
     }
-
-//    @GetMapping("/{name}")
-//    public ResponseEntity<Product> getProductByDepartment(@PathVariable String name) {
-//
-//    }
 
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {

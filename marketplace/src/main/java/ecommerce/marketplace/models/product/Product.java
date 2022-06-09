@@ -1,4 +1,4 @@
-package ecommerce.marketplace.models;
+package ecommerce.marketplace.models.product;
 
 import javax.persistence.*;
 

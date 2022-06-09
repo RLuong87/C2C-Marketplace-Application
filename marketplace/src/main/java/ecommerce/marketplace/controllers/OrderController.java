@@ -1,6 +1,6 @@
 package ecommerce.marketplace.controllers;
 
-import ecommerce.marketplace.models.CustomerOrder;
+import ecommerce.marketplace.models.customerorder.CustomerOrder;
 import ecommerce.marketplace.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,6 @@
-package ecommerce.marketplace.models;
+package ecommerce.marketplace.models.customer;
+
+import ecommerce.marketplace.models.customerorder.CustomerOrder;
 
 import javax.persistence.*;
 import java.util.List;
